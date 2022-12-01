@@ -1,0 +1,15 @@
+server:
+  port: 9001
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+    register-mode: instance
+    qos-enable: false
+
+  protocol:
+    name: dubbo
+    port: -1
+
+  registry:
+    address: nacos://${spring.cloud.nacos.config.server-addr}

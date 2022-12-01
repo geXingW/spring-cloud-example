@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: node-101:8848,node-102:8848,node-103:8848
+
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml
+        namespace: 35228872-8a7d-44ee-966d-800ee0c61bc8
+        group: example
+        refresh-enabled: true

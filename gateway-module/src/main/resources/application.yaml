@@ -1,0 +1,26 @@
+server:
+  port: 8088
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: order_route
+          uri: lb://order-service
+          predicates:
+            - Path=/order/*
+
+        - id: product_route
+          uri: lb://product-service
+          predicates:
+            - Path=/product/*
+
+        - id: user_route
+          uri: lb://user-service
+          predicates:
+            - Path=/user/*
+
+        - id: port_route
+          uri: lb://port-service
+          predicates:
+            - Path=/port/*

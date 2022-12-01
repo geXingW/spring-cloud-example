@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: product-service
+
+  cloud:
+    nacos:
+      config:
+        server-addr: node-101:8848,node-102:8848,node-101:8848
+        file-extension: yaml
+        namespace: 35228872-8a7d-44ee-966d-800ee0c61bc8
+        group: example
+        refresh-enabled: true
