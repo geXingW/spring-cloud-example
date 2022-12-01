@@ -9,4 +9,8 @@ package com.gexingw.order.service;
  */
 public interface OrderService {
     String sayHello(String name);
+
+    String getById(Long id);
+
+    String getOrderProductByOrderId(Long id);
 }

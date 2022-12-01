@@ -1,2 +1,11 @@
 server:
   port: 9004
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+    register-mode: instance
+    qos-enable: false
+
+  registry:
+    address: nacos://${spring.cloud.nacos.config.server-addr}
